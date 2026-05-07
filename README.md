@@ -15,7 +15,7 @@ The architecture follows a modern cloud-native data engineering workflow:
 # 📂 Complete Project File Structure
 
 ```text
-Real-Time-Ecommerce-Data-Pipeline-on-Aws-using-Snowflake-Airflow-dbt/
+Real-Time-Ecommerce-Data-Pipeline-on-AWS-using-Snowflake-Airflow-dbt/
 │
 ├── documentation/
 │   └── Ecommerce_Data_Pipeline_Implementation_Guide.pdf
