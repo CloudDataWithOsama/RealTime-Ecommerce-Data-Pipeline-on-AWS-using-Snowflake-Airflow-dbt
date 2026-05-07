@@ -223,30 +223,6 @@ Amazon QuickSight
 
 ---
 
-# 🛠️ Folder Structure
-
-```text
-project/
-│
-├── dags/
-│   └── snowflake_automation.py
-│
-├── dbt/
-│   ├── models/
-│   │   ├── stg_orders.sql
-│   │   ├── schema.yml
-│   │   └── sources.yml
-│
-├── scripts/
-│   └── simulation.py
-│
-├── screenshots/
-│
-└── README.md
-```
-
----
-
 # ⚙️ Setup Instructions
 
 ## 1️⃣ AWS Infrastructure
