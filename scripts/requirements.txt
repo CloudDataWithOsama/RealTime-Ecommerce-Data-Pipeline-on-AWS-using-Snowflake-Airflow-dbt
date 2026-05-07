@@ -1,0 +1,5 @@
+Faker
+apache-airflow==2.8.1
+apache-airflow-providers-snowflake
+dbt-snowflake
+snowflake-connector-python

@@ -1,0 +1,27 @@
+ecommerce_dbt:
+
+  target: dev
+
+  outputs:
+
+    dev:
+
+      type: snowflake
+
+      account: EJPKLNN-SKB17371
+
+      user: TAHIRHASHMI90
+
+      password: 12qwaszx9090Osama
+
+      role: SYSADMIN
+
+      database: ECOMMERCE_DB
+
+      warehouse: COMPUTE_WH
+
+      schema: ANALYTICS
+
+      threads: 1
+
+      client_session_keep_alive: False

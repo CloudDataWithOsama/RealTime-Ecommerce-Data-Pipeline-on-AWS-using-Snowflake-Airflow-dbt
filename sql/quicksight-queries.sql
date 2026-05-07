@@ -1,0 +1,63 @@
+-- Total Sales KPI
+
+SELECT
+    SUM(PRICE) AS TOTAL_SALES
+FROM ECOMMERCE_DB.RAW.ANALYTICS_ORDERS;
+
+--------------------------------------------------
+
+-- Order Trends
+
+SELECT
+    DATE(INSERTED_AT) AS ORDER_DATE,
+    COUNT(ORDER_ID) AS TOTAL_ORDERS
+
+FROM ECOMMERCE_DB.RAW.ANALYTICS_ORDERS
+
+GROUP BY DATE(INSERTED_AT)
+
+ORDER BY ORDER_DATE;
+
+--------------------------------------------------
+
+-- Top Products
+
+SELECT
+    ITEM_NAME,
+    COUNT(*) AS TOTAL_PURCHASES
+
+FROM ECOMMERCE_DB.RAW.ANALYTICS_ORDERS
+
+GROUP BY ITEM_NAME
+
+ORDER BY TOTAL_PURCHASES DESC;
+
+--------------------------------------------------
+
+-- Revenue By Product
+
+SELECT
+    ITEM_NAME,
+    SUM(PRICE) AS TOTAL_REVENUE
+
+FROM ECOMMERCE_DB.RAW.ANALYTICS_ORDERS
+
+GROUP BY ITEM_NAME
+
+ORDER BY TOTAL_REVENUE DESC;
+
+--------------------------------------------------
+
+-- Top Customers
+
+SELECT
+    CUSTOMER_NAME,
+    SUM(PRICE) AS TOTAL_SPENT
+
+FROM ECOMMERCE_DB.RAW.ANALYTICS_ORDERS
+
+GROUP BY CUSTOMER_NAME
+
+ORDER BY TOTAL_SPENT DESC
+
+LIMIT 10;

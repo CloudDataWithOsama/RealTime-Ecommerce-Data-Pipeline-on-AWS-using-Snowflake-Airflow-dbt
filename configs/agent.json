@@ -1,0 +1,16 @@
+{
+  "cloudwatch.emitMetrics": true,
+  "firehose.endpoint": "firehose.eu-north-1.amazonaws.com",
+  "flows": [
+    {
+      "filePattern": "/tmp/orders.csv*",
+      "deliveryStream": "kf-put-orders-ecommerce-datapipeline-oh",
+      "initialPosition": "START_OF_FILE"
+    },
+    {
+      "filePattern": "/tmp/customers.csv*",
+      "deliveryStream": "kf-put-customers-ecommerce-datapipeline-oh",
+      "initialPosition": "START_OF_FILE"
+    }
+  ]
+}

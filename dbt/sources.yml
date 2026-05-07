@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: ECOMMERCE_DB
+    schema: RAW
+
+    tables:
+      - name: orders
+
+        columns:
+          - name: order_id
+
+            tests:
+              - not_null
+              - unique
